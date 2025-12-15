@@ -16,3 +16,26 @@ This project focuses on a small but useful part of this task, reading real satel
 
 ## Data Source
 - Public TLE data from [Celestrak](https://celestrak.org/NORAD/elements/)
+
+---
+## Setup, Execution, and Testing
+
+### Setup
+- This project requires **Python 3.12 or 3.13**.
+- Install the required dependencies using:
+  ```bash
+  pip install -r requirements.txt
+
+### Running the Project
+- Open the main Jupyter Notebook:
+  ```bash
+  jupyter notebook main.ipynb
+
+
+- Run all cells in order to load TLE data, compute satellite positions, and visualize the orbit.
+
+### Running Tests
+- Unit tests are implemented using **Pytest**.
+- To run the tests, execute the following command from the project root directory:
+  ```bash
+  pytest
