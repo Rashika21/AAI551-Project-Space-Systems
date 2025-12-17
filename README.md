@@ -50,13 +50,16 @@ satellite_trajectory_predictor/
 ### Installation
 
 1. **Clone or download this repository**
+   ```bash
+   https://github.com/Rashika21/AAI551-Project-Space-Systems.git
+   ```
 
-2. **Navigate to the project directory**
+3. **Navigate to the project directory**
    ```bash
    cd satellite_trajectory_predictor
    ```
 
-3. **Install required dependencies**
+4. **Install required dependencies**
    ```bash
    pip install -r requirements.txt
    ```
