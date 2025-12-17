@@ -257,44 +257,24 @@ The program implements **realistic elliptical orbit mechanics** including:
 
 - **Kepler's Equation**: Solved using Newton's method iteration
   - M = E - e·sin(E), where M is mean anomaly, E is eccentric anomaly, e is eccentricity
+  - We solve this using **Newton's method** iteration.
   
 - **True Anomaly Calculation**: From eccentric anomaly using:
-  - tan(ν/2) = √((1+e)/(1-e)) · tan(E/2)
+  - From eccentric anomaly E, we calculate true anomaly ν:
+  - $$\tan\left(\frac{\nu}{2}\right) = \sqrt{\frac{1+e}{1-e}} \cdot \tan\left(\frac{E}{2}\right)$$
   
 - **Orbital Radius**: Using the orbit equation:
-  - r = a(1-e²)/(1 + e·cos(ν))
+  - $$r = \frac{a(1-e^2)}{1 + e \cdot \cos(\nu)}$$
   
 - **3D Coordinate Transformation**: From perifocal frame to ECI frame using:
-  - RAAN (Ω): Right Ascension of Ascending Node
-  - Inclination (i): Orbital plane tilt  
-  - Argument of Perigee (ω): Orientation within orbital plane
+  - **RAAN (Ω)**: Right Ascension of Ascending Node
+  - **Inclination (i)**: Orbital plane tilt
+  - **Argument of Perigee (ω)**: Orientation within orbital plane
 
 - **Vis-Viva Equation**: For accurate velocity at any orbital position:
-  - v = √(μ(2/r - 1/a))
+  - $$v = \sqrt{\mu \left(\frac{2}{r} - \frac{1}{a}\right)}$$
 
 - **Earth Gravitational Parameter**: μ = 398600.4418 km³/s²
-
-## Technical Notes: Elliptical Orbit Implementation
-This project implements **realistic elliptical orbits** using proper orbital mechanics:
-### Kepler's Equation
-The relationship between mean anomaly (M) and eccentric anomaly (E):
-$$M = E - e \cdot \sin(E)$$
-We solve this using **Newton's method** iteration.
-### True Anomaly Calculation
-From eccentric anomaly E, we calculate true anomaly ν:
-$$\tan\left(\frac{\nu}{2}\right) = \sqrt{\frac{1+e}{1-e}} \cdot \tan\left(\frac{E}{2}\right)$$
-### Orbital Radius
-The distance from the central body:
-$$r = \frac{a(1-e^2)}{1 + e \cdot \cos(\nu)}$$
-### 3D Coordinate Transformation
-Positions are transformed from the perifocal frame to the Earth-Centered Inertial (ECI) frame using:
-**RAAN (Ω)**: Right Ascension of Ascending Node
-**Inclination (i)**: Orbital plane tilt
-**Argument of Perigee (ω)**: Orientation within orbital plane
-### Vis-Viva Equation
-Orbital velocity at any point:
-$$v = \sqrt{\mu \left(\frac{2}{r} - \frac{1}{a}\right)}$$
-where $\mu = 398600.4418$ km³/s² is Earth's gravitational parameter.
 
 This implementation provides realistic orbital trajectories for satellites with any eccentricity between 0 (circular) and nearly 1 (highly elliptical).
 
