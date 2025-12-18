@@ -56,7 +56,7 @@ satellite_trajectory_predictor/
 
 3. **Navigate to the project directory**
    ```bash
-   cd satellite_trajectory_predictor
+   cd AAI551-Project-Space-Systems
    ```
 
 4. **Install required dependencies**
