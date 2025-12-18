@@ -223,4 +223,3 @@ def calculate_velocity(satellite, time_delta_seconds=0):
     velocity = np.sqrt(mu * (2.0 / r - 1.0 / a))
     
     return velocity
-
